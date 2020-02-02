@@ -1,0 +1,30 @@
+Dimensions:
+I have not used resize function in cv2 to make the dimensions smaller on the beatles.jpg picture.
+I did not see it necessary or obligatory in the assignment text to resize the picture dimensions, 
+so the dimensions of the image being blurred are therefore: 480 (H), 640 (W), and 3 (C).
+
+Runtime:
+Runtime Numba using unvectorized blur alogrithm with 1 blur cycle takes arround 0.45 seconds.
+Runtime Numba using vectorized blur alogrithm with 1 blur cycle takes arround 0.77 seconds.
+
+Comparisons:
+Unvectorized:
+Numba is approximately 10 times faster then standard python.
+Vectorized:
+Numba is approximately 19.25 times slower then pure numpy.
+
+Conclusion:
+Advantage:
+-For the slow unvectorized algorithm, numba is alot faster than standard python. Especially when
+normal python for-loops are used, Numba speeds thing up by at least a factor of 10 when there are 
+three nested for-loops.
+-Very easy to just decorate a function to make it fast.
+Disadvantage:
+-The jit C compiler is not optimal for all cases.
+-Not all type casts and python spesific code works in a function decorated using jit. 
+The numpy.astype("uint32") will not work inside a jit decorated function. 
+-Numba is slower than Numpy for pure vectorized algorithm using Nympy arrays. Numpy is implemented i C,
+and Numba (with a decorator on top) will probably add extra heading compared with pure Numpy.
+
+
+ 

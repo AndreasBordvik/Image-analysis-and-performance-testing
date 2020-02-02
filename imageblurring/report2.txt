@@ -1,0 +1,12 @@
+Dimensions:
+I have not used resize function in cv2 to make the dimensions smaller on the beatles.jpg picture.
+I did not see it necessary or obligatory in the assignment text to resize the picture dimensions, 
+so the dimensions of the image being blurred are therefore: 480 (H), 640 (W), and 3 (C).
+
+Runtime:
+Runtime numpy using vectorized blur alogrithm with 1 blur cycle takes arround 0.040 seconds.
+
+Comparisons:
+The vectorized numpy algorithm approximately 112.5 times faster then the standard python 
+unvectorized algorithm.
+

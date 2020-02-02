@@ -1,0 +1,27 @@
+Dimensions:
+I have not used resize function in cv2 to make the dimensions smaller on the beatles.jpg picture.
+I did not see it necessary or obligatory in the assignment text to resize the picture dimensions, 
+so the dimensions of the image being blurred are therefore: 480 (H), 640 (W), and 3 (C).
+
+Runtime:
+Runtime Cython using unvectorized blur algorithm with 1 blur cycle takes arround 0.040 seconds.
+Runtime Cython using vectorized blur algorithm with 1 blur cycle takes arround 0.030 seconds.
+
+Comparisons:
+Unvectorized algorithm:
+Cython is approximately 112.5 times faster then the standard python. 
+Cython is as fast as numpy used with vectorized algorithm.
+Cython is approximately 11.25 times faster then Numba. 
+Vectorized algorithm:
+Cython looks to be a little faster, 1.33 times, than Numpy.
+Cython is approximately 25.67 times faster then Numba. 
+
+Conclusion:
+Advantage: 
+Cython is the fastes choise. Cython is generating heavly optimized C code for both the
+unvectorized, and vectorized algorithm. Cython can interract with other c files and import c files as modules.
+Disadvantage:
+Cython requires a compiler, and requires that the .pyx file is compiled. 
+Not all python code is easly compiled out-of-the-box.
+It also requires more though into type declaration in the code. 
+  

@@ -1,0 +1,5 @@
+I have not used resize function in cv2 to make the dimensions smaller on the beatles.jpg picture.
+I did not see it necessary or obligatory in the assignment text to resize the picture dimensions, 
+so the dimensions of the image being blurred are therefore: 480 (H), 640 (W), and 3 (C).
+
+Runtime standard python using unvectorized blur alogrithm with 1 blur cycle takes arround 4.5 seconds.
